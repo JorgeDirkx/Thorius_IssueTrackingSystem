@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Project</title>
+</head>
+<body>
+<div align="center">
+    <h1>Edit Project</h1>
+    <br />
+    <form action="#" th:action="@{/save}" th:object="${project}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Project ID:</td>
+                <td>
+                    <input type="text" th:field="*{id}" readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td>Project Name:</td>
+                <td><input type="text" th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td>Start date:</td>
+                <td><input type="text" th:field="*{startDate}" /></td>
+            </tr>
+            <tr>
+                <td>Target enddate:</td>
+                <td><input type="text" th:field="*{targetEndDate}" /></td>
+            </tr>
+            <tr>
+                <td>Created On</td>
+                <td><input type="text" th:field="*{createdOn}" /></td>
+            </tr>
+            <tr>
+                <td>Created By</td>
+                <td><input type="text" th:field="*{createdBy}" /></td>
+            </tr>
+            <tr>
+                <td>Modified On</td>
+                <td><input type="text" th:field="*{modifiedOn}" /></td>
+            </tr>
+            <tr>
+                <td><Modified By</td>
+                <td><input type="text" th:field="*{modifiedBy}" /></td>
+            </tr>
+            <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
